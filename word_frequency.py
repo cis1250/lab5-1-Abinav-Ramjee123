@@ -56,5 +56,5 @@ def main():
     print_frequencies(words, frequencies)
 
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     main()
