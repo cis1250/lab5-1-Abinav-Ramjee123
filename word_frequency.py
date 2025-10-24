@@ -31,7 +31,7 @@ def get_sentence():
         if is_sentence(sentence):
             return sentence
         else:
-            print("❌ Invalid sentence! It must start with a capital letter and end with '.', '?', or '!'. Try again.\n")
+            print(" Invalid sentence! It must start with a capital letter and end with '.', '?', or '!'. Try again.\n")
 
 # Function 2: Calculate word frequencies
 def calculate_frequencies(sentence):
@@ -59,7 +59,7 @@ def calculate_frequencies(sentence):
 
 # Function 3: Display the results
 def print_frequencies(words, frequencies):
-    print("\n📊 Word Frequencies:")
+    print("\n Word Frequencies:")
     for i in range(len(words)):
         print(f"{words[i]}: {frequencies[i]}")
 
@@ -71,4 +71,4 @@ def main():
 
 # Entry point
 if __name__ == "_main_":
-    main
+    main()
