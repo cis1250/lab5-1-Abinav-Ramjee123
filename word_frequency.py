@@ -69,7 +69,7 @@ def main():
     print_frequencies(words, freqs)
 
 # Entry point
-if _name_ == "_main_":
+if __name__ == "_main_":
     main()
 
 
