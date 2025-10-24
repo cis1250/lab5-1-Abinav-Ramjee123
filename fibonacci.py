@@ -2,25 +2,42 @@
 
 # Fibonacci Sequence Exercise with functions
 # TODO: (Read detailed instructions in the Readme file)
+# Fibonacci Sequence Exercise with functions
+
 def get_user_input():
-    num = int(input("How many terms? "))
-    return num
+    while True:
+        user_input = input("Enter how many Fibonacci terms you want: ")
+        
+        if user_input.isdigit():
+            num = int(user_input)
+            if num > 0:
+                return num
+            else:
+                print("Please enter a positive number.")
+        else:
+            print("Invalid input. Please enter a positive integer.")
+
 
 def generate_fibonacci(n):
-    a, b = 0, 1
-    seq = []
+    sequence = []
+    first, second = 0, 1
+    
     for _ in range(n):
-        seq.append(a)
-        a, b = b, a + b
-    return seq
+        sequence.append(first)
+        first, second = second, first + second
 
-def print_sequence(seq):
-    for num in seq:
-        print(num)
+    return sequence
+
+
+def print_sequence(sequence):
+    print("\nFibonacci Sequence:")
+    for number in sequence:
+        print(number)
+
 
 def main():
-    n = get_user_input()
-    fib = generate_fibonacci(n)
-    print_sequence(fib)
+    num_terms = get_user_input()
+    fib_sequence = generate_fibonacci(num_terms)
+    print_sequence(fib_sequence)
 
 main()
